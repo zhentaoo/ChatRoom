@@ -59,21 +59,6 @@
 </form>
 <script src="socket.js"></script>
 <script src="jquery-1.11.1.js"></script>
-
-<script>
-    var socket = io.connect('http://localhost:3088');
-    socket.on('message', function (data) {
-    });
-    $('form').submit(function () {
-        socket.emit('message', $('#m').val());
-        $('#m').val('');
-        return false;
-    });
-
-    socket.on('message', function (msg) {
-        $('#messages').append($('<li>').text(msg));
-    });
-
-</script>
+<script src="client.js"></script>
 </body>
-</html>  
+</html>
